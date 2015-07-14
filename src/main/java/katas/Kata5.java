@@ -2,21 +2,23 @@ package katas;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
+import model.BoxArt;
 import model.Movie;
+import model.MovieList;
 import util.DataUtil;
 
 import java.util.List;
 import java.util.Map;
 
 /*
-    Goal: use map() to project an array of videos into an array of {id, title}-pairs
+    Goal: Retrieve the largest rating using reduce()
     DataSource: DataUtil.getMovies()
-    Output: List of ImmutableMap.of("id", "5", "title", "Bad Boys")
+    Output: Double
 */
-public class Kata1 {
-    public static List<Map> execute() {
+public class Kata5 {
+    public static Double execute() {
         List<Movie> movies = DataUtil.getMovies();
 
-        return ImmutableList.of(ImmutableMap.of("id", 5, "title", "Bad Boys"));
+        return 3.0;
     }
 }
