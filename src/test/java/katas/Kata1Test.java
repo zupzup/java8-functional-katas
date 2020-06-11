@@ -24,7 +24,7 @@ public class Kata1Test {
 
     @Test
     public void testSizeOfTheReturnedMovieList() {
-        assertEquals(Constants.SIZE_OF_RETURNED_MOVIES, Kata1.execute().size());
+        assertEquals(4, Kata1.execute().size());
     }
 
     @Test
