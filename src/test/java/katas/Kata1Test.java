@@ -26,7 +26,7 @@ public class Kata1Test {
 
     @Test
     public void testSizeOfTheReturnedMovieList() {
-        assertEquals(Kata1.execute().size(), SIZE_OF_RETURNED_MOVIES);
+        assertEquals(SIZE_OF_RETURNED_MOVIES, Kata1.execute().size());
     }
 
     @Test
@@ -37,8 +37,8 @@ public class Kata1Test {
             Map movieWithID = moviesWithIDs.get(index);
             Map movieWithIDForAssertion = moviesWithIDsForAssertion.get(index);
 
-            assertEquals(movieWithID.get(KEY_MOVIE_ID), movieWithIDForAssertion.get(KEY_MOVIE_ID));
-            assertEquals(movieWithID.get(KEY_MOVIE_TITLE), movieWithIDForAssertion.get(KEY_MOVIE_TITLE));
+            assertEquals(movieWithIDForAssertion.get(KEY_MOVIE_ID), movieWithID.get(KEY_MOVIE_ID));
+            assertEquals(movieWithIDForAssertion.get(KEY_MOVIE_TITLE), movieWithID.get(KEY_MOVIE_TITLE));
         }
     }
 }
