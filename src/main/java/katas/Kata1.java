@@ -1,6 +1,7 @@
 package katas;
 
 import com.google.common.collect.ImmutableMap;
+import util.Constants;
 import util.DataUtil;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class Kata1 {
     public static List<Map> execute() {
         return DataUtil.getMovies()
                 .stream()
-                .map(movie -> ImmutableMap.of("id", movie.getId(), "title", movie.getTitle()))
+                .map(movie -> ImmutableMap.of(Constants.KEY_MOVIE_ID, movie.getId(), Constants.KEY_MOVIE_TITLE, movie.getTitle()))
                 .collect(Collectors.toUnmodifiableList());
     }
 }
