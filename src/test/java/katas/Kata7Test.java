@@ -31,7 +31,7 @@ public class Kata7Test {
 
     @Test
     public void testTheReturnedMoviesShouldEqualToTheGivenValues() {
-        List<Map> returnedMovies = Kata4.execute();
+        List<Map> returnedMovies = Kata7.execute();
 
         for (int index = 0; index < returnedMovies.size(); index++) {
             Map returnedMovie = returnedMovies.get(index);
