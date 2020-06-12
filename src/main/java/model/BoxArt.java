@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class BoxArt {
     private Integer width;
     private Integer height;
@@ -36,5 +38,20 @@ public class BoxArt {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BoxArt boxArt = (BoxArt) o;
+        return Objects.equals(width, boxArt.width) &&
+                Objects.equals(height, boxArt.height) &&
+                Objects.equals(url, boxArt.url);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(width, height, url);
     }
 }
