@@ -1,15 +1,14 @@
 package katas;
 
-import org.junit.Assert;
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertEquals;
 
 
 public class Kata5Test {
 
     @Test
-    public void testExecute() {
-        Assert.assertThat(Kata5.execute(), equalTo(4));
+    public void testTheLargestRatingShouldBeFive() {
+        assertEquals(Double.valueOf(5.0), Kata5.execute());
     }
 }
