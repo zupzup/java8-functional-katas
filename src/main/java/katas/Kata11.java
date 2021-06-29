@@ -6,6 +6,7 @@ import util.DataUtil;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /*
     Goal: Create a datastructure from the given data:
@@ -63,8 +64,34 @@ public class Kata11 {
         List<Map> boxArts = DataUtil.getBoxArts();
         List<Map> bookmarkList = DataUtil.getBookmarkList();
 
-        return ImmutableList.of(ImmutableMap.of("name", "someName", "videos", ImmutableList.of(
-                ImmutableMap.of("id", 5, "title", "The Chamber", "time", 123, "boxart", "someUrl")
-        )));
+        //return ImmutableList.of(ImmutableMap.of("name", "someName", "videos", ImmutableList.of(
+        //        ImmutableMap.of("id", 5, "title", "The Chamber", "time", 123, "boxart", "someUrl")
+        //)));
+        return DataUtil.getLists()
+                .stream()
+                .map(listMap -> ImmutableMap.of(
+                        "name", listMap.get("name"),
+                        "videos", (DataUtil.getVideos()
+                                .stream()
+                                .filter(filterMap -> filterMap.get("listId").equals(listMap.get("id")))
+                                .map(videoMap -> ImmutableMap.of(
+                                        "id", videoMap.get("id"),
+                                        "title", videoMap.get("title"),
+                                        "time", DataUtil.getBookmarkList()
+                                                .stream()
+                                                .filter(filterMap -> filterMap.get("videoId").equals(videoMap.get("id")))
+                                                .map(bookmarkMap -> bookmarkMap.get("time"))
+                                                .findFirst()
+                                                .get()
+                                        ,
+                                        "boxart", DataUtil.getBoxArts()
+                                                .stream()
+                                                .filter(filterMap -> filterMap.get("videoId").equals(videoMap.get("id")))
+                                                .map(boxartsMap -> boxartsMap.get("url"))
+                                                .findFirst()
+                                                .get()
+                                ))
+                                .collect(Collectors.toList()))))
+                .collect(Collectors.toList());
     }
 }
