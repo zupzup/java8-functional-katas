@@ -1,4 +1,7 @@
-import katas.*;
+package katas;
+
+import katas.kata.*;
+
 import static org.junit.Assert.*;
 
 public class Main {

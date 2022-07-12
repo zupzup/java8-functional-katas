@@ -1,8 +1,8 @@
-package util;
+package katas.util;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import model.*;
+import katas.model.*;
 
 import java.util.ArrayList;
 import java.util.Date;

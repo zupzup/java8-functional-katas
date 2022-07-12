@@ -1,9 +1,9 @@
-package katas;
+package katas.kata;
 
 import com.google.common.collect.ImmutableMap;
-import model.BoxArt;
-import model.MovieList;
-import util.DataUtil;
+import katas.model.BoxArt;
+import katas.model.MovieList;
+import katas.util.DataUtil;
 
 import java.util.List;
 import java.util.Map;

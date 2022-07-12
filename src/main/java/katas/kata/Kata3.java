@@ -1,8 +1,8 @@
-package katas;
+package katas.kata;
 
-import model.Movie;
-import model.MovieList;
-import util.DataUtil;
+import katas.model.Movie;
+import katas.model.MovieList;
+import katas.util.DataUtil;
 
 import java.util.List;
 import java.util.stream.Collectors;

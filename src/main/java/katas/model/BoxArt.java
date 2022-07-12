@@ -1,4 +1,4 @@
-package model;
+package katas.model;
 
 public class BoxArt {
     private Integer width;

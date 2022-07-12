@@ -1,14 +1,9 @@
-package katas;
+package katas.kata;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import model.BoxArt;
-import model.Movie;
-import model.MovieList;
-import util.DataUtil;
+import katas.model.Movie;
+import katas.util.DataUtil;
 
 import java.util.List;
-import java.util.Map;
 
 /*
     Goal: Retrieve the largest rating using reduce()

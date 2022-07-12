@@ -1,4 +1,4 @@
-package model;
+package katas.model;
 
 import java.util.List;
 

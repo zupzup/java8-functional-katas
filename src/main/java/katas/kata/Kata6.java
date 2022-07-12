@@ -1,7 +1,7 @@
-package katas;
+package katas.kata;
 
-import model.Movie;
-import util.DataUtil;
+import katas.model.Movie;
+import katas.util.DataUtil;
 
 import java.util.List;
 

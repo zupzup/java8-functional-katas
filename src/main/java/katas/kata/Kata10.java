@@ -1,11 +1,9 @@
-package katas;
+package katas.kata;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import model.MovieList;
-import util.DataUtil;
+import katas.util.DataUtil;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 

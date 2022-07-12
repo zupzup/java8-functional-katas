@@ -1,5 +1,6 @@
 package katas;
 
+import katas.kata.Kata9;
 import org.junit.Assert;
 import org.junit.Test;
 

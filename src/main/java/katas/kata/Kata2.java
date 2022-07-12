@@ -1,7 +1,7 @@
-package katas;
+package katas.kata;
 
-import model.Movie;
-import util.DataUtil;
+import katas.model.Movie;
+import katas.util.DataUtil;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,6 +14,10 @@ import java.util.stream.Collectors;
 public class Kata2 {
     public static List<Integer> execute() {
         List<Movie> movies = DataUtil.getMovies();
-        return movies.stream().filter(movie -> movie.getRating().equals(5.0)).map(Movie::getId).collect(Collectors.toList());
+        return movies
+                .stream()
+                .filter(movie -> movie.getRating().equals(5.0))
+                .map(Movie::getId)
+                .collect(Collectors.toList());
     }
 }

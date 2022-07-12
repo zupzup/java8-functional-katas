@@ -1,12 +1,10 @@
-package katas;
+package katas.kata;
 
-import com.codepoetics.protonpack.StreamUtils;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import model.Bookmark;
-import model.Movie;
-import model.MovieList;
-import util.DataUtil;
+import katas.model.Bookmark;
+import katas.model.Movie;
+import katas.util.DataUtil;
 
 import java.util.List;
 import java.util.Map;
